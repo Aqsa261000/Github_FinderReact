@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from 'react';
+// import Home from './pages/home';
+import { CssBaseline } from '@mui/material';
+import { Route, Routes } from 'react-router-dom';
+import { About, Home, Profile } from './pages';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      {/* reset all the margins and paddings */}
+      <CssBaseline />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/profile/:name" element={<Profile />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Fragment>
   );
-}
+};
 
 export default App;

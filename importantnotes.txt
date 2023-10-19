@@ -1,0 +1,5 @@
+In my pages folder, there are two files name index.js , home.js for now.
+I want that in pages folder whatever files are there, we should import it in pages/index.js, destructure it there and then we call those files in App.js
+
+JSX contains the components
+JS contains the styling, functions etc
